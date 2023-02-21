@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/lightGrey"
+    app:cardCornerRadius="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginHorizontal="20dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/nameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/typeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/versionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/resolutionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resolution:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/powerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power in mA used:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/vendorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vendor:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/vendor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/maxRangeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maximum Range:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/maxRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/maxDelayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maximum delay:"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="900"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/minDelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beautyBlack"
+            android:textFontWeight="500"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

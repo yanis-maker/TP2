@@ -27,7 +27,7 @@ public class Activity1 extends AppCompatActivity {
         setContentView(R.layout.activity_1);
         getSupportActionBar().hide();
 
-        final SensorManager sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        SensorManager sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> sensorList=sensorManager.getSensorList(Sensor.TYPE_ALL);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);

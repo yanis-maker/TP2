@@ -24,10 +24,10 @@
             android:name=".Activity4"
             android:exported="false" />
         <activity
-            android:name=".Activity3"
+            android:name="com.example.activity3.Activity3"
             android:exported="false" />
         <activity
-            android:name=".Activity2"
+            android:name="com.example.activity2.Activity2"
             android:exported="false" />
         <activity
             android:name="com.example.activity1.Activity1"

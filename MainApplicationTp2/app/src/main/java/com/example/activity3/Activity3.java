@@ -1,14 +1,16 @@
-package com.example.mainapplicationtp2;
+package com.example.activity3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Activity2 extends AppCompatActivity {
+import com.example.mainapplicationtp2.R;
+
+public class Activity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
+        setContentView(R.layout.activity_3);
     }
 }

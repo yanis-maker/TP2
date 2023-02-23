@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.activity3.Activity3">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometre"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:textFontWeight="900"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutColored"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@color/black"
+        android:layout_margin="130dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+    >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/accuracyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:textFontWeight="1000"
+        android:textSize="40sp" />
+
+</LinearLayout>

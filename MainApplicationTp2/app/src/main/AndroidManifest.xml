@@ -18,10 +18,11 @@
             android:name=".Activity6"
             android:exported="false" />
         <activity
-            android:name=".Activity5"
+            android:name="com.example.activity5.Activity5"
             android:exported="false" />
+
         <activity
-            android:name=".Activity4"
+            android:name="com.example.activity4.Activity4"
             android:exported="false" />
         <activity
             android:name="com.example.activity3.Activity3"
@@ -42,5 +43,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.flash" />
 
 </manifest>

@@ -31,7 +31,7 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
-        Resources resources=getResources();
+        getSupportActionBar().hide();
 
         LinearLayout coloredLayout=findViewById(R.id.layoutColored);
 

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.activity2.Activity2;
+import com.example.activity6.Activity6;
 import com.example.mainapplicationtp2.MainActivity;
 import com.example.mainapplicationtp2.R;
 import com.google.android.material.button.MaterialButton;
@@ -20,6 +21,7 @@ import com.google.android.material.button.MaterialButton;
 public class Activity4 extends AppCompatActivity {
 
     SensorManager sensorManager;
+    Sensor sDirection;
 
     SensorEventListener directionListener;
     @Override
@@ -41,7 +43,7 @@ public class Activity4 extends AppCompatActivity {
         TextView directionText=findViewById(R.id.directionText);
 
         sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        Sensor sDirection=sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
+        sDirection=sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
 
         float[] gravity = new float[3];
         directionListener=new SensorEventListener() {
@@ -81,9 +83,16 @@ public class Activity4 extends AppCompatActivity {
             }
         };
 
-        sensorManager.registerListener(directionListener,sDirection,SensorManager.SENSOR_DELAY_NORMAL);
 
 
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(directionListener, sDirection, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override

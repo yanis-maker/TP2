@@ -5,6 +5,7 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -17,7 +18,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.activity6.Activity6;
+import com.example.mainapplicationtp2.MainActivity;
 import com.example.mainapplicationtp2.R;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +29,7 @@ import java.util.List;
 public class Activity3 extends AppCompatActivity {
 
     SensorManager sensorManager;
-
+    Sensor sAccelerometre;
     SensorEventListener accelerometreListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,7 @@ public class Activity3 extends AppCompatActivity {
         LinearLayout coloredLayout=findViewById(R.id.layoutColored);
 
         sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        Sensor sAccelerometre=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sAccelerometre=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         TextView accuracyText=findViewById(R.id.accuracyText);
         accelerometreListener=new SensorEventListener() {
@@ -62,15 +66,26 @@ public class Activity3 extends AppCompatActivity {
                 }
 
             }
-
-
             @Override
             public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
             }
         };
 
-        sensorManager.registerListener(accelerometreListener,sAccelerometre,SensorManager.SENSOR_DELAY_NORMAL);
+        MaterialButton returnButton=findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Activity3.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(accelerometreListener, sAccelerometre, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override

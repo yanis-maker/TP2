@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Proximité du visage"
+            android:text="Proximité"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_gravity="center"
@@ -37,5 +37,15 @@
         android:textSize="30sp"
         android:textColor="@color/black"
         android:layout_centerInParent="true"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="Retour"
         />
 </RelativeLayout>

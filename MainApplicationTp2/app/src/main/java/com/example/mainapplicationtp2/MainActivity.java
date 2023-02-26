@@ -11,6 +11,7 @@ import com.example.activity2.Activity2;
 import com.example.activity3.Activity3;
 import com.example.activity4.Activity4;
 import com.example.activity5.Activity5;
+import com.example.activity7.Activity7;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Activity7.class);
+                Intent intent=new Intent(MainActivity.this, Activity7.class);
                 startActivity(intent);
             }
         });

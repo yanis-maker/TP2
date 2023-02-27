@@ -1,5 +1,7 @@
 package com.example.activity3;
 
+import static java.lang.Math.sqrt;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.graphics.drawable.DrawableCompat;
@@ -47,12 +49,14 @@ public class Activity3 extends AppCompatActivity {
             @Override
             public void onSensorChanged(SensorEvent event) {
 
-                float x = event.values[0];
-                float y = event.values[1];
-                float z = event.values[2];
+                double x = event.values[0];
+                double y = event.values[1];
+                double z = event.values[2];
 
-                float thresholdLow = 2.5f;
-                float thresholdHigh = 5.0f;
+                float thresholdLow = 2.0f;
+                float thresholdHigh = 3.0f;
+
+                double accelartion=sqrt(x*x + y*y + z*z);
 
                 if (Math.abs(x) < thresholdLow || Math.abs(y) < thresholdLow || Math.abs(z) < thresholdLow) {
                     coloredLayout.setBackgroundColor(Color.GREEN);

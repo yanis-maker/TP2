@@ -29,6 +29,7 @@ public class Activity5 extends AppCompatActivity {
     private SensorEventListener flashListener;
     Sensor sAccelerometre;
     private CameraManager camera;
+    boolean flashOn=false;
 
     private String cameraID;
     @Override
@@ -59,7 +60,7 @@ public class Activity5 extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        
+
         flashListener=new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent event) {
@@ -67,15 +68,22 @@ public class Activity5 extends AppCompatActivity {
                 float y = event.values[1];
                 float z = event.values[2];
 
+
                 // Calculer l'accélération nette
                 float acceleration = (float) Math.sqrt(x * x + y * y + z * z);
 
-                // Détecter les mouvements de secousse
-                if (acceleration > 15) {
-                    flashText.setText("Flash On");
-                    switchFlashLight(true);
-                    switchOffButton.setVisibility(View.VISIBLE);
+                if (acceleration > 25 ) {
+                    if (flashOn) {
+                        flashText.setText("Flash Off");
+                        flashOn = switchFlashLight(false);
+                        switchOffButton.setVisibility(View.GONE);
+                    } else {
+                        flashText.setText("Flash On");
+                        flashOn = switchFlashLight(true);
+                        switchOffButton.setVisibility(View.VISIBLE);
+                    }
                 }
+
             }
 
             @Override
@@ -105,12 +113,13 @@ public class Activity5 extends AppCompatActivity {
 
     }
 
-    public void switchFlashLight(boolean status) {
+    public boolean switchFlashLight(boolean status) {
         try {
             camera.setTorchMode(cameraID, status);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
+        return status;
     }
     @Override
     protected void onResume() {

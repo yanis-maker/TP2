@@ -53,15 +53,15 @@ public class Activity3 extends AppCompatActivity {
                 double y = event.values[1];
                 double z = event.values[2];
 
-                float thresholdLow = 2.0f;
-                float thresholdHigh = 3.0f;
+                float thresholdLow = 10.0f;
+                float thresholdHigh = 15.0f;
 
                 double accelartion=sqrt(x*x + y*y + z*z);
 
-                if (Math.abs(x) < thresholdLow || Math.abs(y) < thresholdLow || Math.abs(z) < thresholdLow) {
+                if (accelartion<thresholdLow) {
                     coloredLayout.setBackgroundColor(Color.GREEN);
                     accuracyText.setText("Low");
-                } else if (Math.abs(x) > thresholdHigh || Math.abs(y) > thresholdHigh || Math.abs(z) > thresholdHigh) {
+                } else if (accelartion>thresholdHigh) {
                     coloredLayout.setBackgroundColor(Color.RED);
                     accuracyText.setText("High");
                 } else {

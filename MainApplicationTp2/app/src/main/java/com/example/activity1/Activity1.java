@@ -10,6 +10,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.mainapplicationtp2.MainActivity;
 import com.example.mainapplicationtp2.R;
@@ -26,6 +27,7 @@ public class Activity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_1);
         getSupportActionBar().hide();
+
 
         SensorManager sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> sensorList=sensorManager.getSensorList(Sensor.TYPE_ALL);
